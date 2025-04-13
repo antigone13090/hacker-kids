@@ -32,6 +32,19 @@ router.post('/register', (req, res) => {
   });
 });
 
+router.get('/dashboard', (req, res) => {
+  if (!req.session.user) return res.redirect('/login');
+
+  db.all(
+    "SELECT challenge FROM scores JOIN users ON users.id = scores.user_id WHERE users.username = ? AND scores.completed = 1",
+    [req.session.user],
+    (err, rows) => {
+      if (err) return res.send("Erreur DB");
+      res.render('dashboard', { username: req.session.user, scores: rows });
+    }
+  );
+});
+
 router.get('/logout', (req, res) => {
   req.session.destroy(() => res.redirect('/login'));
 });
