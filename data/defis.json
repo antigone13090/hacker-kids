@@ -1,0 +1,16 @@
+[
+  {
+    "nom": "introduction",
+    "titre": "Introduction au hacking éthique",
+    "niveau": "facile",
+    "consigne": "Apprends à inspecter le code source d'une page web.",
+    "solution": "Utilise clic droit > Inspecter."
+  },
+  {
+    "nom": "formulaire-pirate",
+    "titre": "Formulaire pirate",
+    "niveau": "moyen",
+    "consigne": "Trouve comment modifier un champ caché dans le formulaire HTML.",
+    "solution": "Utilise les outils de développement pour éditer l'HTML."
+  }
+]

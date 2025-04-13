@@ -1,0 +1,10 @@
+<h1>Liste des défis</h1>
+<ul>
+  <% defis.forEach(defi => { %>
+    <li>
+      <a href="/defis/<%= defi.nom %>">
+        <strong><%= defi.titre %></strong> — <em><%= defi.niveau %></em>
+      </a>
+    </li>
+  <% }) %>
+</ul>
